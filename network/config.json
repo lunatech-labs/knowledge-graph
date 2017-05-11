@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "Harry Laou"
+  },
+  "text": {
+    "more": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. \nAliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. \nMaecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est.\n Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  \nCras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. \nAliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus.\n Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. \nQuisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus",
+    "intro": "Lorem ipsum dolor sit amet, ",
+    "title": "Knowlege Graph"
+  },
+  "legend": {
+    "edgeLabel": "pre-requisites",
+    "colorLabel": "#FFFFFF",
+    "nodeLabel": "Topics"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": false,
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": false,
+    "imageAttribute": "Label"
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
