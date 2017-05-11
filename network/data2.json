@@ -1,0 +1,199 @@
+{
+  "nodes": [
+    {
+      "label": "Type Parameters",
+      "x": 351.1327209472656,
+      "y": -138.36712646484375,
+      "id": "3",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Traits",
+      "x": 150.2452392578125,
+      "y": -346.0060119628906,
+      "id": "2",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Higher Kinded Type",
+      "x": -149.7439422607422,
+      "y": 345.64825439453125,
+      "id": "7",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Monad",
+      "x": -350.79132080078125,
+      "y": 138.75340270996094,
+      "id": "0",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Context Bounds",
+      "x": -346.0316467285156,
+      "y": -150.00796508789062,
+      "id": "5",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Kinds",
+      "x": 138.50132751464844,
+      "y": 351.2311706542969,
+      "id": "9",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Type Constructors",
+      "x": 345.32745361328125,
+      "y": 150.24220275878906,
+      "id": "8",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "Implicit Parameters",
+      "x": -138.62916564941406,
+      "y": -350.87164306640625,
+      "id": "6",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    },
+    {
+      "label": "TypeClasses",
+      "x": -0.010682467371225357,
+      "y": -0.622362494468689,
+      "id": "1",
+      "attributes": {
+        "Difficulty": "Intermediate",
+        "References": "http://google.nl,http://google.com",
+        "Info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in luctus magna. Aliquam erat volutpat. Morbi pretium consectetur pharetra. Aenean gravida eleifend fringilla. Maecenas sed ipsum turpis. Donec et libero lacinia, vehicula tellus at, auctor est. Nulla quis justo id mauris dignissim lacinia quis ac tellus. Duis consequat nulla nunc. In eu mollis mi.  Cras a turpis vitae tellus auctor scelerisque et ac purus. Aliquam erat volutpat. Aliquam finibus mauris sem, eu interdum eros facilisis ac. Quisque feugiat suscipit rhoncus. Nunc volutpat ullamcorper erat, eget porta ex pharetra id. Mauris consequat felis velit, euismod posuere ipsum gravida in. Proin sodales lectus libero. Pellentesque aliquet vestibulum ipsum eget elementum. Quisque fermentum felis non lorem accumsan, eget luctus velit condimentum. Maecenas sagittis maximus tempus."
+      },
+      "color": "rgb(153,153,153)",
+      "size": 10.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "7",
+      "target": "9",
+      "id": "9",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "0",
+      "target": "7",
+      "id": "7",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "0",
+      "target": "1",
+      "id": "0",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "1",
+      "target": "3",
+      "id": "2",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "1",
+      "target": "6",
+      "id": "4",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "1",
+      "target": "8",
+      "id": "5",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "5",
+      "target": "6",
+      "id": "6",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "7",
+      "target": "8",
+      "id": "8",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "1",
+      "target": "2",
+      "id": "1",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    },
+    {
+      "source": "1",
+      "target": "5",
+      "id": "3",
+      "attributes": {},
+      "color": "rgb(153,153,153)",
+      "size": 1.0
+    }
+  ]
+}
