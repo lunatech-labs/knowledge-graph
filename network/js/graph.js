@@ -82,6 +82,15 @@ function loadJSON(path) {
           $("#attributepane #data").text(info);
           $("#attributepane #level").text(level);
 
+
+          if (level === 'Hard') {
+            $("#attributepane #level").addClass('label label-danger');
+          } else if (level === 'Intermediate') {
+            $("#attributepane #level").addClass('label label-warning');
+          } else if (level === 'Easy') {
+            $("#attributepane #level").addClass('label label-success');
+          }
+
           var refsEl = $("#attributepane #refs");
 
           refsEl.empty();
