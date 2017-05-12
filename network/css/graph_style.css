@@ -1,0 +1,30 @@
+body {
+    left: 0;
+    top: 0;
+    height: 700px;
+}
+
+#mynetwork {
+    height: 700px;
+}
+
+#attributepane {
+    display: none;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
+    margin: 0;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 1px solid #ccc;
+    padding: 0px 18px 0px 18px;
+    z-index: 1;
+}
+
+#refscontainer {
+    display: none;
+}
