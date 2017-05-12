@@ -31,11 +31,13 @@ function loadJSON(path) {
 
         var container = document.getElementById("mynetwork");
         var options = {
+
           layout: {
+
             hierarchical: {
-              direction: "RL",
+              direction: "UD",
               sortMethod: "directed",
-              nodeSpacing: 150
+              nodeSpacing: 200
             }
           },
           nodes: {
@@ -58,8 +60,7 @@ function loadJSON(path) {
           edges: {
             smooth: true,
             arrows: {to: true}
-          },
-          physics: true
+          }
         };
 
         var seen = [];
@@ -95,7 +96,7 @@ function loadJSON(path) {
             Cookies.set('name', newContents);
 
 
-            node.color = { background: '#e0e57e' }
+            node.color = { background: '#e0e57e' };
 
             nodes.update(node);
         })
@@ -222,8 +223,6 @@ function parseGephi(gephiJSON, optionsObj) {
     node['id'] = gNode.id;
     node['attributes'] = gNode.attributes;
     node['title'] = gNode.title;
-    node['x'] = gNode.x;
-    node['y'] = gNode.y;
     node['label'] = gNode.label;
     node['title'] = gNode.attributes !== undefined ? gNode.attributes.title : undefined;
     node['size'] = gNode.size;
