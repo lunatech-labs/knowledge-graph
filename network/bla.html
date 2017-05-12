@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.min.css"/>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <style type="text/css">
         body {
@@ -18,18 +20,17 @@
         }
 
         #mynetwork {
-            left: 200px;
             height: 700px;
         }
 
 #attributepane {
-       display: block;
+    display: none;
     position:absolute;
     height:auto;
     bottom:0;
     top:0;
     right:0;
-    width: 240px;
+    width: 300px;
     background-color: #fff;
     margin: 0;
     word-wrap: break-word;
@@ -38,6 +39,10 @@
     padding: 0px 18px 0px 18px;
     z-index: 1;
 }
+
+#refscontainer { display: none; }
+
+
 
     </style>
 
@@ -49,15 +54,15 @@
 <div id="mynetwork"></div>
 <div id="attributepane">
     <div class="text">
-        <span id="headertext"></span>
-        <div class="nodeattributes">
-            <div id="data"></div>
-            <div id="level"></div>
-            <div>
-                <ul id="refs">
+        <h4 id="headertext"></h4>
 
-                </ul>
-            </div>
+        <span id="level" class="label label-default">Default</span>
+
+        <p id="data"></p>
+
+        <div id="refscontainer">
+            <h5>References</h5>
+            <ul id="refs"></ul>
         </div>
     </div>
 </div>
@@ -117,6 +122,9 @@
                       }
                     }
                 },
+                interaction:{
+                    dragNodes: false
+                },
                 edges: {
                     smooth: true,
                     arrows: { to: true }
@@ -137,26 +145,36 @@
                 var info = node.attributes.Info;
                 var refs = node.attributes.References.split(',');
 
+                $("#attributepane").show();
+
                 $("#attributepane #headertext").text(title);
                 $("#attributepane #data").text(info);
                 $("#attributepane #level").text(level);
 
                 var refsEl = $("#attributepane #refs");
 
-                $.each(refs, function(n, str) {
-                    console.log(str);
+                refsEl.empty();
 
-                    var li = $("<li></li>");
-                    var anchor = $("<a></a>");
+                if(refs.length > 0) {
+                    $("#attributepane #refscontainer").show();
 
-                    anchor.attr("href", str);
-                    anchor.attr("target", "_blank");
-                    anchor.text(str);
+                    $.each(refs, function(n, str) {
 
-                    li.append(anchor);
+                        var li = $("<li></li>");
+                        var anchor = $("<a></a>");
 
-                    refsEl.append(li);
-                });
+                        anchor.attr("href", str);
+                        anchor.attr("target", "_blank");
+                        anchor.text(str);
+
+                        li.append(anchor);
+
+                        refsEl.append(li);
+                    });
+                } else {
+                    $("#attributepane #refscontainer").hide();
+                }
+
             });
           }
           else {
@@ -170,6 +188,8 @@
 
 
     var gephiJSON = loadJSON("data2.json"); // code in importing_from_gephi.
+
+
 
 
 
