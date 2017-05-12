@@ -18,13 +18,14 @@ function loadJSON(path) {
         // parse the gephi file to receive an object
         // containing nodes and edges in vis format.
 
-        var parsed = vis.network.gephiParser.parseGephi(JSON.parse(xhr.responseText), parserOptions);
+        var parsed = parseGephi(JSON.parse(xhr.responseText), parserOptions);
 
+        var nodes = new vis.DataSet(parsed.nodes);
 
         // provide data in the normal fashion
         var data = {
           edges: parsed.edges,
-          nodes: parsed.nodes
+          nodes: nodes
         }
 
 
@@ -32,9 +33,9 @@ function loadJSON(path) {
         var options = {
           layout: {
             hierarchical: {
-              direction: "UD",
+              direction: "RL",
               sortMethod: "directed",
-              nodeSpacing: 200
+              nodeSpacing: 150
             }
           },
           nodes: {
@@ -52,29 +53,69 @@ function loadJSON(path) {
             }
           },
           interaction: {
-            dragNodes: false
+            dragNodes: true
           },
           edges: {
             smooth: true,
             arrows: {to: true}
           },
-          physics: false
+          physics: true
         };
+
+        var seen = [];
+
+        if(Cookies.get('name') != undefined) {
+            seen = JSON.parse(Cookies.get('name'));
+        }
+
+        _.each(_.values(nodes._data), function(n) {
+
+            if(_.contains(seen, n.id)) {
+                n.color = { background: '#e0e57e' };
+            }
+        });
+
 
         // create a network
         var network = new vis.Network(container, data, options);
 
 
+
+        $("#confirm").click(function(e) {
+            var alreadySeen = [];
+
+            if(Cookies.get('name') != undefined) {
+                alreadySeen = JSON.parse(Cookies.get('name'));
+            }
+
+            var node = $(e.target).data('node');
+
+            alreadySeen.push(node.id);
+            var newContents = JSON.stringify(alreadySeen);
+            Cookies.set('name', newContents);
+
+
+            node.color = { background: '#e0e57e' }
+
+            nodes.update(node);
+        })
+
+
         network.on("selectNode", function (params) {
 
-          var node = data.nodes.filter(function (n) {
-            return n.id == params.nodes[0]
-          })[0];
+            var node = null;
+
+          for(var k in data.nodes._data) {
+            if(data.nodes._data[k].id == params.nodes[0]) {
+                node = data.nodes._data[k];
+            }
+          }
+
 
           var title = node.label;
           var level = node.attributes.Difficulty;
-          var info = node.attributes.Info;
-          var refs = node.attributes.References.split(',');
+          var info = node.attributes.Info != undefined ? node.attributes.Info : "";
+          var refs = node.attributes.References != undefined && node.attributes.References.trim() != "" ? node.attributes.References.split(',') : [];
 
           $("#attributepane").show();
 
@@ -82,18 +123,26 @@ function loadJSON(path) {
           $("#attributepane #data").text(info);
           $("#attributepane #level").text(level);
 
+          var levelEl = $("#attributepane #level");
 
           if (level === 'Hard') {
-            $("#attributepane #level").addClass('label label-danger');
+            levelEl.show();
+            levelEl.attr('class', 'label label-danger');
           } else if (level === 'Intermediate') {
-            $("#attributepane #level").addClass('label label-warning');
+            levelEl.show();
+            levelEl.attr('class', 'label label-warning');
           } else if (level === 'Easy') {
-            $("#attributepane #level").addClass('label label-success');
+            levelEl.show();
+            levelEl.attr('class', 'label label-success');
+          } else {
+            levelEl.hide();
           }
 
           var refsEl = $("#attributepane #refs");
 
           refsEl.empty();
+
+          $("#confirm").data('node', node);
 
           if (refs.length > 0) {
             $("#attributepane #refscontainer").show();
@@ -126,5 +175,65 @@ function loadJSON(path) {
   xhr.send();
 }
 
+function parseGephi(gephiJSON, optionsObj) {
+  var edges = [];
+  var nodes = [];
+  var options = {
+    edges: {
+      inheritColor: false
+    },
+    nodes: {
+      fixed: false,
+      parseColor: false
+    }
+  };
 
-var gephiJSON = loadJSON("fp_data.json"); // code in importing_from_gephi.
+  if (optionsObj !== undefined) {
+    if (optionsObj.fixed !== undefined)        {options.nodes.fixed = optionsObj.fixed}
+    if (optionsObj.parseColor !== undefined)   {options.nodes.parseColor = optionsObj.parseColor}
+    if (optionsObj.inheritColor !== undefined) {options.edges.inheritColor = optionsObj.inheritColor}
+  }
+
+  var gEdges = gephiJSON.edges;
+  var gNodes = gephiJSON.nodes;
+  for (var i = 0; i < gEdges.length; i++) {
+    var edge = {};
+    var gEdge = gEdges[i];
+    edge['id'] = gEdge.id;
+    edge['from'] = gEdge.source;
+    edge['to'] = gEdge.target;
+    edge['attributes'] = gEdge.attributes;
+    edge['label'] = gEdge.label;
+    edge['title'] = gEdge.attributes !== undefined ? gEdge.attributes.title : undefined;
+    if (gEdge['type'] === 'Directed') {
+      edge['arrows'] = 'to';
+    }
+//    edge['value'] = gEdge.attributes !== undefined ? gEdge.attributes.Weight : undefined;
+//    edge['width'] = edge['value'] !== undefined ? undefined : edgegEdge.size;
+    if (gEdge.color && options.inheritColor === false) {
+      edge['color'] = gEdge.color;
+    }
+    edges.push(edge);
+  }
+
+  for (var i = 0; i < gNodes.length; i++) {
+    var node = {};
+    var gNode = gNodes[i];
+    node['id'] = gNode.id;
+    node['attributes'] = gNode.attributes;
+    node['title'] = gNode.title;
+    node['x'] = gNode.x;
+    node['y'] = gNode.y;
+    node['label'] = gNode.label;
+    node['title'] = gNode.attributes !== undefined ? gNode.attributes.title : undefined;
+    node['size'] = gNode.size;
+    node['fixed'] = options.nodes.fixed && gNode.x !== undefined && gNode.y !== undefined;
+    nodes.push(node);
+  }
+
+  return {nodes:nodes, edges:edges};
+}
+
+
+
+var gephiJSON = loadJSON("freestyle.json"); // code in importing_from_gephi.
